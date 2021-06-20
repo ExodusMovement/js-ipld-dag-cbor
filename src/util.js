@@ -1,6 +1,6 @@
 'use strict'
 
-const cbor = require('borc')
+const cbor = require('@exodus/borc')
 const CID = require('cids')
 const isCircular = require('is-circular')
 const uint8ArrayConcat = require('uint8arrays/concat')

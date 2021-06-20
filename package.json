@@ -17,7 +17,7 @@
     "src/*.js"
   ],
   "dependencies": {
-    "borc": "^3.0.0",
+    "@exodus/borc": "^3.0.0-exodus.0",
     "cids": "^1.0.0",
     "is-circular": "^1.0.2",
     "uint8arrays": "^2.1.3"
