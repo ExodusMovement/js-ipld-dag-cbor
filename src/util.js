@@ -3,8 +3,6 @@
 const cbor = require('@exodus/borc')
 const CID = require('cids')
 const isCircular = require('is-circular')
-const uint8ArrayConcat = require('uint8arrays/concat')
-const uint8ArrayFromString = require('uint8arrays/from-string')
 
 // https://github.com/ipfs/go-ipfs/issues/3570#issuecomment-273931692
 const CID_CBOR_TAG = 42
@@ -23,10 +21,12 @@ function tagCID (cid) {
     throw new Error('Could not tag CID - was not string or CID')
   }
 
-  return new cbor.Tagged(CID_CBOR_TAG, uint8ArrayConcat([
-    uint8ArrayFromString('00', 'base16'), // thanks jdag
+  const nodebuf = Buffer.concat([
+    Buffer.from('00', 'hex'),
     buf
-  ], 1 + buf.length))
+  ])
+  const uint8buf = new Uint8Array(nodebuf.buffer, nodebuf.offset, nodebuf.length)
+  return new cbor.Tagged(CID_CBOR_TAG, uint8buf)
 }
 
 /**
