@@ -1,5 +1,5 @@
 {
-  "name": "ipld-dag-cbor",
+  "name": "@exodus/ipld-dag-cbor",
   "version": "1.0.0",
   "description": "JavaScript implementation of the IPLD (InterpPlanetary Linked Data)",
   "leadMaintainer": "Volker Mische <volker.mische@gmail.com>",
@@ -12,7 +12,7 @@
     "node": ">=6.0.0",
     "npm": ">=3.0.0"
   },
-  "homepage": "https://github.com/ipld/js-ipld-dag-cbor",
+  "homepage": "https://github.com/ExodusMovement/js-ipld-dag-cbor",
   "files": [
     "src/*.js"
   ],
