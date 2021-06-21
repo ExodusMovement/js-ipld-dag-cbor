@@ -1,6 +1,6 @@
 {
   "name": "@exodus/ipld-dag-cbor",
-  "version": "1.0.0",
+  "version": "1.0.0-exodus.1",
   "description": "JavaScript implementation of the IPLD (InterpPlanetary Linked Data)",
   "leadMaintainer": "Volker Mische <volker.mische@gmail.com>",
   "main": "src/index.js",
