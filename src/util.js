@@ -65,15 +65,15 @@ function replaceCIDbyTAG (dagNode) {
     if (keys.length > 0) {
       // Recursive transform
       /** @type {Record<string, any>} */
-      const out = {}
-      keys.forEach((key) => {
+      const out = []
+      for (const key of keys) {
         if (typeof obj[key] === 'object') {
-          out[key] = transform(obj[key])
+          out.push(key, transform(obj[key]))
         } else {
-          out[key] = obj[key]
+          out.push(key, obj[key])
         }
-      })
-      return out
+      }
+      return Object.fromEntries(out)
     } else {
       return obj
     }
